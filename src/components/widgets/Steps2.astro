@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from "astro-icon";
 
 interface Item {
   title: string;
@@ -22,10 +22,10 @@ export interface Props {
 }
 
 const {
-  title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('subtitle'),
+  title = await Astro.slots.render("title"),
+  subtitle = await Astro.slots.render("subtitle"),
   highlight,
-  callToAction = await Astro.slots.render('callToAction'),
+  callToAction = await Astro.slots.render("callToAction"),
   items = [],
 } = Astro.props;
 
@@ -83,7 +83,7 @@ const {
 
               <div class="w-full">
                 {
-                  typeof callToAction === 'string' ? (
+                  typeof callToAction === "string" ? (
                     <Fragment set:html={callToAction} />
                   ) : (
                     callToAction &&
@@ -116,7 +116,7 @@ const {
                         </div>
                       </li>
                     ))
-                  : ''
+                  : ""
               }
             </ul>
           </div>

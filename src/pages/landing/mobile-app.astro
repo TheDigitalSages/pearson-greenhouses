@@ -1,9 +1,9 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from "~/layouts/PageLayout.astro";
 
-import Header from '~/components/widgets/Header.astro';
-import Hero2 from '~/components/widgets/Hero2.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import Header from "~/components/widgets/Header.astro";
+import Hero2 from "~/components/widgets/Hero2.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
 
 const meta = {
   title: "Mobile App Landing Page",
@@ -18,13 +18,13 @@ const meta = {
       actions={[
         {
           type: "ghost",
-          text: 'Login',
-          href: '#',
+          text: "Login",
+          href: "#",
         },
         {
           type: "primary",
-          text: 'Sign Up',
-          href: '#',
+          text: "Sign Up",
+          href: "#",
         },
       ]}
     />
@@ -33,9 +33,9 @@ const meta = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
-    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
-    image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
+    callToAction={{ text: "Get template", href: "https://github.com/onwidget/astrowind", icon: "tabler:download" }}
+    callToAction2={{ text: "Learn more", href: "#features" }}
+    image={{ src: import("~/assets/images/hero.png"), alt: "AstroWind Hero Image" }}
   >
     <Fragment slot="title">
       Free template for <span class="hidden lg:inline">create your website <br />with</span>
@@ -56,9 +56,9 @@ const meta = {
 
   <CallToAction
     callToAction={{
-      text: 'Get template',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:download',
+      text: "Get template",
+      href: "https://github.com/onwidget/astrowind",
+      icon: "tabler:download",
     }}
   >
     <Fragment slot="title">

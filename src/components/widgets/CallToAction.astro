@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from "astro-icon";
 
 interface CallToAction {
   text: string;
@@ -14,9 +14,9 @@ export interface Props {
 }
 
 const {
-  title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('subtitle'),
-  callToAction = await Astro.slots.render('callToAction'),
+  title = await Astro.slots.render("title"),
+  subtitle = await Astro.slots.render("subtitle"),
+  callToAction = await Astro.slots.render("callToAction"),
 } = Astro.props;
 ---
 
@@ -36,7 +36,7 @@ const {
         }
         {subtitle && <p class="text-xl text-muted dark:text-slate-400" set:html={subtitle} />}
         {
-          typeof callToAction === 'string' ? (
+          typeof callToAction === "string" ? (
             <Fragment set:html={callToAction} />
           ) : (
             callToAction &&

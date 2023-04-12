@@ -1,16 +1,16 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from "~/layouts/PageLayout.astro";
 
-import Header from '~/components/widgets/Header.astro';
-import Hero2 from '~/components/widgets/Hero2.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
-import Content from '~/components/widgets/Content.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import Header from "~/components/widgets/Header.astro";
+import Hero2 from "~/components/widgets/Hero2.astro";
+import Steps2 from "~/components/widgets/Steps2.astro";
+import Content from "~/components/widgets/Content.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
 
-import { headerData } from '~/data';
+import { headerData } from "~/data";
 
 const meta = {
-  title: 'Saas Landing Page',
+  title: "Saas Landing Page",
 };
 ---
 
@@ -21,13 +21,13 @@ const meta = {
       actions={[
         {
           type: "ghost",
-          text: 'Login',
-          href: '#',
+          text: "Login",
+          href: "#",
         },
         {
           type: "primary",
-          text: 'Sign Up',
-          href: '#',
+          text: "Sign Up",
+          href: "#",
         },
       ]}
       isSticky
@@ -37,9 +37,9 @@ const meta = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
-    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
-    image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
+    callToAction={{ text: "Get template", href: "https://github.com/onwidget/astrowind", icon: "tabler:download" }}
+    callToAction2={{ text: "Learn more", href: "#features" }}
+    image={{ src: import("~/assets/images/hero.png"), alt: "AstroWind Hero Image" }}
   >
     <Fragment slot="title">
       Free template for <br />
@@ -62,24 +62,24 @@ const meta = {
     isReversed
     items={[
       {
-        title: 'Per ei quaeque sensibus',
+        title: "Per ei quaeque sensibus",
         description:
-          'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+          "Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.",
       },
       {
-        title: 'Cu imperdiet posidonium sed',
+        title: "Cu imperdiet posidonium sed",
         description:
-          'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
+          "Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.",
       },
       {
-        title: 'Nulla omittam sadipscing mel ne',
+        title: "Nulla omittam sadipscing mel ne",
         description:
-          'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+          "At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.",
       },
     ]}
     image={{
-      src: import('~/assets/images/caos.jpg'),
-      alt: 'Colorful Image',
+      src: import("~/assets/images/caos.jpg"),
+      alt: "Colorful Image",
     }}
   >
     <Fragment slot="content">
@@ -94,24 +94,24 @@ const meta = {
   <Content
     items={[
       {
-        title: 'Per ei quaeque sensibus',
+        title: "Per ei quaeque sensibus",
         description:
-          'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+          "Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.",
       },
       {
-        title: 'Cu imperdiet posidonium sed',
+        title: "Cu imperdiet posidonium sed",
         description:
-          'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
+          "Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.",
       },
       {
-        title: 'Nulla omittam sadipscing mel ne',
+        title: "Nulla omittam sadipscing mel ne",
         description:
-          'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+          "At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.",
       },
     ]}
     image={{
-      src: import('~/assets/images/caos.jpg'),
-      alt: 'Colorful Image',
+      src: import("~/assets/images/caos.jpg"),
+      alt: "Colorful Image",
     }}
   >
     <Fragment slot="content">
@@ -127,24 +127,24 @@ const meta = {
     isReversed
     items={[
       {
-        title: 'Per ei quaeque sensibus',
+        title: "Per ei quaeque sensibus",
         description:
-          'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+          "Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.",
       },
       {
-        title: 'Cu imperdiet posidonium sed',
+        title: "Cu imperdiet posidonium sed",
         description:
-          'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
+          "Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.",
       },
       {
-        title: 'Nulla omittam sadipscing mel ne',
+        title: "Nulla omittam sadipscing mel ne",
         description:
-          'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+          "At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.",
       },
     ]}
     image={{
-      src: import('~/assets/images/caos.jpg'),
-      alt: 'Colorful Image',
+      src: import("~/assets/images/caos.jpg"),
+      alt: "Colorful Image",
     }}
   >
     <Fragment slot="content">
@@ -160,25 +160,25 @@ const meta = {
     title="Sed ac magna sit amet risus tristique interdum, at vel velit in hac habitasse platea dictumst."
     subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus."
     callToAction={{
-      text: 'Get template',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:download',
+      text: "Get template",
+      href: "https://github.com/onwidget/astrowind",
+      icon: "tabler:download",
     }}
     items={[
       {
-        title: 'Responsive Elements',
+        title: "Responsive Elements",
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.",
       },
       {
-        title: 'Flexible Team',
+        title: "Flexible Team",
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.",
       },
       {
-        title: 'Ecologic Software',
+        title: "Ecologic Software",
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.",
       },
     ]}
   />
@@ -187,9 +187,9 @@ const meta = {
 
   <CallToAction
     callToAction={{
-      text: 'Get template',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:download',
+      text: "Get template",
+      href: "https://github.com/onwidget/astrowind",
+      icon: "tabler:download",
     }}
   >
     <Fragment slot="title">

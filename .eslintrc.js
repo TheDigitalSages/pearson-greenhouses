@@ -4,12 +4,16 @@ module.exports = {
     es2022: true,
     browser: true,
   },
+  ignorePatterns: ['cypress/*'],
   extends: ['eslint:recommended', 'plugin:astro/recommended'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  rules: {},
+  rules: {
+    quotes: [1, 'double', { avoidEscape: true }],
+    'jsx-quotes': [1, 'prefer-double'],
+  },
   overrides: [
     {
       files: ['*.js'],
