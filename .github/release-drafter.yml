@@ -1,7 +1,10 @@
 name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
+<<<<<<< HEAD
 exclude-labels:
   - 'skip-changelog'
+=======
+>>>>>>> main
 categories:
   - title: '🚀 Features'
     labels:
