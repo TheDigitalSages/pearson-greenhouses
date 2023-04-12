@@ -49,3 +49,6 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_MARKDOWN: false
+          FILTER_REGEX_EXCLUDE: .*test/.*
+          FILTER_REGEX_INCLUDE: .*src/.*,.*lib/.*
