@@ -1,0 +1,16 @@
+name: Frontend Testing
+on: push
+jobs:
+  single:
+    # the example has Yarn workspace in its "root" folder
+    # examples/start-and-yarn-workspaces
+    # and tests in a subfolder like "workspace-1"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cypress-io/github-action@v5
+        with:
+          #working-directory: examples/start-and-yarn-workspaces/workspace-1
+          build: yarn run build
+          start: yarn start
+          wait-on: 'http://localhost:3000'
