@@ -23,3 +23,5 @@ package-lock.json
 pnpm-lock.yaml
 
 .astro
+.idea/other.xml
+/cypress/videos/

@@ -10,7 +10,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier -w .",
-    "lint:eslint": "eslint . --ext .js,.ts,.astro"
+    "lint:eslint": "eslint . --ext .js,.ts,.astro",
+    "test": "npx cypress run",
+    "cypress": "npx cypress open"
   },
   "devDependencies": {
     "@astrojs/image": "^0.16.4",
@@ -21,6 +23,7 @@
     "@astrojs/tailwind": "^3.1.1",
     "@astrolib/analytics": "^0.3.0",
     "@astrolib/seo": "^0.3.0",
+    "@cypress/code-coverage": "^3.10.4",
     "@fontsource/inter": "^4.5.15",
     "@tailwindcss/typography": "^0.5.9",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
@@ -28,6 +31,7 @@
     "astro": "^2.2.1",
     "astro-compress": "^1.1.35",
     "astro-icon": "^0.8.0",
+    "cypress": "^12.9.0",
     "eslint": "^8.37.0",
     "eslint-plugin-astro": "^0.26.1",
     "eslint-plugin-jsx-a11y": "^6.7.1",
