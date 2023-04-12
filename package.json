@@ -10,7 +10,6 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier -w .",
     "lint:eslint": "eslint ./src --ext .js,.ts,.astro ",
     "test": "npx cypress run",
     "cypress": "npx cypress open"
