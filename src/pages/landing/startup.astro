@@ -1,11 +1,11 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from "~/layouts/PageLayout.astro";
 
-import Header from '~/components/widgets/Header.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import Header from "~/components/widgets/Header.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
 
-import { headerData } from '~/data';
+import { headerData } from "~/data";
 
 const meta = {
   title: "Startup Landing Page",
@@ -25,8 +25,8 @@ const meta = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
+    callToAction={{ text: "Get template", href: "https://github.com/onwidget/astrowind", icon: "tabler:download" }}
+    callToAction2={{ text: "Learn more", href: "#features" }}
   >
     <Fragment slot="title">
       Free template for <span class="hidden lg:inline">create your website <br />with</span>
@@ -51,9 +51,9 @@ const meta = {
 
   <CallToAction
     callToAction={{
-      text: 'Get template',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:download',
+      text: "Get template",
+      href: "https://github.com/onwidget/astrowind",
+      icon: "tabler:download",
     }}
   >
     <Fragment slot="title">
