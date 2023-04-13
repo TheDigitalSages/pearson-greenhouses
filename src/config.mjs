@@ -1,18 +1,18 @@
 import defaultImage from "./assets/images/default.png";
 
 const CONFIG = {
-  name: "AstroWind",
+  name: "Pearson Greenhouses",
 
-  origin: "https://astrowind.vercel.app",
+  origin: "https://www.pearsonsgreenhouses.com",
   basePathname: "/",
   trailingSlash: false,
 
-  title: "AstroWind — Free template for create a website with Astro + Tailwind CSS",
+  title: "Pearson Greenhouses",
   description:
     "🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.",
   defaultImage: defaultImage,
 
-  defaultTheme: "system", // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  defaultTheme: "system",
 
   language: "en",
   textDirection: "ltr",
@@ -25,10 +25,10 @@ const CONFIG = {
   }),
 
   googleAnalyticsId: false, // or "G-XXXXXXXXXX",
-  googleSiteVerificationId: "orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M",
+  googleSiteVerificationId: "",
 
   blog: {
-    disabled: false,
+    disabled: true,
     postsPerPage: 4,
 
     post: {
