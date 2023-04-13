@@ -2,5 +2,5 @@ name: Release Drafter
 
 jobs:
   CodeQuality:
-    uses: github.com/TheDigitalSages/tds-github-actions/.github/workflows/CodeQuality.yml@feature/actions
+    uses: TheDigitalSages/tds-github-actions/.github/workflows/CodeQuality.yml@feature/actions
     secrets: inherit
