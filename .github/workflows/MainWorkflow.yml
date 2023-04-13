@@ -1,5 +1,13 @@
 name: Release Drafter
 
+on:
+  workflow_call:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: [ main ]
+
 jobs:
   CodeQuality:
     uses: TheDigitalSages/tds-github-actions/.github/workflows/CodeQuality.yml@feature/actions
