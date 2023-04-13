@@ -12,3 +12,5 @@ jobs:
   Frontend:
     uses: TheDigitalSages/tds-github-actions/.github/workflows/WebFrontEndTests.yml@feature/actions
     secrets: inherit
+    with:
+      site-name: 'pearson-greenhouses'
