@@ -9,6 +9,9 @@ on:
     branches: [ main ]
 
 jobs:
-  'Code Quality':
+  CodeQuality:
     uses: TheDigitalSages/tds-github-actions/.github/workflows/CodeQuality.yml@feature/actions
+    secrets: inherit
+  Testing:
+    uses: TheDigitalSages/tds-github-actions/.github/workflows/WebFrontEndTests.yml@feature/actions
     secrets: inherit

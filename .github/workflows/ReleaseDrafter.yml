@@ -1,0 +1,17 @@
+name: Release Drafter
+
+on:
+  workflow_call:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [ opened, reopened, synchronize ]
+
+permissions:
+  contents: read
+
+jobs:
+  ReleaseDrafter:
+    uses: TheDigitalSages/tds-github-actions/.github/workflows/ReleaseDrafter.yml@feature/actions
+    secrets: inherit
