@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   ReleaseDrafter:
-    uses: TheDigitalSages/tds-github-actions/.github/workflows/ReleaseDrafter.yml@feature/actions
+    uses: TheDigitalSages/tds-github-actions/.github/workflows/ReleaseDrafter.yml@main
     permissions:
       contents: read
       pull-requests: write

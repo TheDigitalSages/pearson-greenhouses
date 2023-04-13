@@ -10,5 +10,5 @@ on:
 
 jobs:
   Quality:
-    uses: TheDigitalSages/tds-github-actions/.github/workflows/CodeQuality.yml@feature/actions
+    uses: TheDigitalSages/tds-github-actions/.github/workflows/CodeQuality.yml@main
     secrets: inherit

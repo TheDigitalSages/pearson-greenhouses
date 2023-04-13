@@ -10,7 +10,7 @@ on:
 
 jobs:
   Frontend:
-    uses: TheDigitalSages/tds-github-actions/.github/workflows/WebFrontEndTests.yml@feature/actions
+    uses: TheDigitalSages/tds-github-actions/.github/workflows/WebFrontEndTests.yml@main
     secrets: inherit
     with:
       site-name: 'pearson-greenhouses'
