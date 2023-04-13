@@ -1,6 +1,7 @@
 name: Release Drafter
 
 on:
+  workflow_call:
   push:
     branches:
       - main
@@ -11,13 +12,10 @@ permissions:
   contents: read
 
 jobs:
-  update_release_draft:
-    name: Update Release Draft
+  ReleaseDrafter:
+    uses: TheDigitalSages/tds-github-actions/.github/workflows/ReleaseDrafter.yml@main
     permissions:
-      contents: write
+      contents: read
       pull-requests: write
-    runs-on: ubuntu-latest
-    steps:
-      - uses: release-drafter/release-drafter@v5
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}

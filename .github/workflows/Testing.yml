@@ -1,0 +1,16 @@
+name: E2E Tests
+
+on:
+  workflow_call:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  Frontend:
+    uses: TheDigitalSages/tds-github-actions/.github/workflows/WebFrontEndTests.yml@main
+    secrets: inherit
+    with:
+      site-name: 'pearson-greenhouses'
