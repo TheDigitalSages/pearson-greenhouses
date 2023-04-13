@@ -1,0 +1,14 @@
+name: E2E Tests
+
+on:
+  workflow_call:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  Frontend:
+    uses: TheDigitalSages/tds-github-actions/.github/workflows/WebFrontEndTests.yml@feature/actions
+    secrets: inherit

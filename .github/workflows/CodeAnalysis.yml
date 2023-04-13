@@ -1,4 +1,4 @@
-name: Code Quality Scan
+name: Code Analysis
 
 on:
   workflow_call:
@@ -9,9 +9,6 @@ on:
     branches: [ main ]
 
 jobs:
-  CodeQuality:
+  Quality:
     uses: TheDigitalSages/tds-github-actions/.github/workflows/CodeQuality.yml@feature/actions
-    secrets: inherit
-  Testing:
-    uses: TheDigitalSages/tds-github-actions/.github/workflows/WebFrontEndTests.yml@feature/actions
     secrets: inherit
