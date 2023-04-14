@@ -1,41 +1,51 @@
 ---
+import { Picture } from "@astrojs/image/components";
+const services = [
+  {
+    name: "Annuals",
+    description: "List some plants, flowers or veggies under these sections",
+  },
+  {
+    name: "Perennials",
+    description: "List some plants, flowers or veggies under these sections",
+  },
+  {
+    name: "Veggies",
+    description: "List some plants, flowers or veggies under these sections",
+  },
+  {
+    name: "Herbs",
+    description: "List some plants, flowers or veggies under these sections",
+  },
+];
 ---
 
-<div class="grid md:grid-flow-col grid-flow-row">
-  <div class="flex flex-col items-center pb-10">
-    <img
-      class="w-24 h-24 mb-3 rounded-full shadow-lg"
-      src="/docs/images/people/profile-picture-3.jpg"
-      alt="Bonnie image"
-    />
-    <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-    <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+<div class="mt-10 mx-10">
+  <div class="mx-auto max-w-screen-sm">
+    <h2 class="mb-4 text-4xl text-center tracking-tight font-extrabold text-gray-900 dark:text-white">Services</h2>
+    <p class="mb-8 font-light text-center text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
+      Maybe go into a little detail about your services here. The header "Services" will have changeable text later
+    </p>
   </div>
-  <div class="flex flex-col items-center pb-10">
-    <img
-      class="w-24 h-24 mb-3 rounded-full shadow-lg"
-      src="/docs/images/people/profile-picture-3.jpg"
-      alt="Bonnie image"
-    />
-    <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-    <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
-  </div>
-  <div class="flex flex-col items-center pb-10">
-    <img
-      class="w-24 h-24 mb-3 rounded-full shadow-lg"
-      src="/docs/images/people/profile-picture-3.jpg"
-      alt="Bonnie image"
-    />
-    <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-    <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
-  </div>
-  <div class="flex flex-col items-center pb-10">
-    <img
-      class="w-24 h-24 mb-3 rounded-full shadow-lg"
-      src="/docs/images/people/profile-picture-3.jpg"
-      alt="Bonnie image"
-    />
-    <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-    <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+  <div id="services" class="grid md:grid-flow-col grid-flow-row my-10 md:px-5">
+    {
+      services.map((service) => (
+        <div class="flex flex-col items-center py-10">
+          <Picture
+            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+            widths={[96, 128]}
+            sizes="(max-width: 767px) 96px, 128px"
+            aspectRatio={128 / 128}
+            loading="eager"
+            width={128}
+            height={128}
+            src={import("~/assets/images/sample-flower.jpg")}
+            alt="Flowers"
+          />
+          <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">{service.name}</h5>
+          <span class="text-sm text-center text-gray-500 dark:text-gray-400">{service.description}</span>
+        </div>
+      ))
+    }
   </div>
 </div>

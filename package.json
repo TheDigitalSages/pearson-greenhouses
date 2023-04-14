@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "@astrojs/netlify": "^2.2.2",
+    "astro-imagetools": "^0.8.1",
     "static-google-map": "^0.0.5"
   }
 }
