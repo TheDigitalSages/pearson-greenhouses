@@ -22,14 +22,14 @@ const services = [
 
 <div class="mt-10 mx-10">
   <div class="mx-auto max-w-screen-sm">
-    <h2 class="mb-4 text-4xl text-center tracking-tight font-extrabold text-gray-900 dark:text-white">Services</h2>
+    <h2 class="mb-4 text-4xl text-center tracking-tight font-extrabold text-primary dark:text-white">Services</h2>
     <p class="mb-8 font-light text-center text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
       Maybe go into a little detail about your services here. The header "Services" will have changeable text later
     </p>
   </div>
   <div id="services" class="grid md:grid-flow-col grid-flow-row my-10 md:px-5">
     {
-      services.map((service) => (
+      services.map((service, index) => (
         <div class="flex flex-col items-center py-10">
           <Picture
             class="w-24 h-24 mb-3 rounded-full shadow-lg"
@@ -42,8 +42,8 @@ const services = [
             src={import("~/assets/images/sample-flower.jpg")}
             alt="Flowers"
           />
-          <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">{service.name}</h5>
-          <span class="text-sm text-center text-gray-500 dark:text-gray-400">{service.description}</span>
+          <h5 class=`mb-1 text-xl font-medium ${index % 2 === 0 ? 'text-primary' : 'text-secondary'} dark:text-white`>{service.name}</h5>
+          <span class="text-sm text-center px-10 text-gray-500 dark:text-gray-400">{service.description}</span>
         </div>
       ))
     }
