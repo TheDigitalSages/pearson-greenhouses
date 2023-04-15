@@ -9,6 +9,11 @@ import { getRelativeUrlByFilePath } from "~/utils/directories";
 
 import CustomStyles from "~/components/CustomStyles.astro";
 
+import { contentfulClient } from "../../lib/contentful";
+import { WebsiteDetails } from "../../types";
+
+const websiteDetails: WebsiteDetails = await contentfulClient.getEntry<WebsiteDetails>("295uP17ssbHUyTpzVBLmOF");
+
 export interface Props extends MetaSEO {
   dontUseTitleTemplate?: boolean;
 }
@@ -16,7 +21,7 @@ export interface Props extends MetaSEO {
 const defaultImage = SITE.defaultImage
   ? (
       await getImage({
-        src: SITE.defaultImage,
+        src: websiteDetails.fields.seoImage.fields.file.url,
         alt: "Default image",
         width: 1200,
         height: 628,
@@ -25,8 +30,8 @@ const defaultImage = SITE.defaultImage
   : "";
 
 const {
-  title = SITE.name,
-  description = "",
+  title = websiteDetails.fields.websiteName,
+  description = websiteDetails.fields.websiteDescription,
   image: _image = defaultImage,
 
   canonical = getCanonical(String(Astro.url.pathname)),

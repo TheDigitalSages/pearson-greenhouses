@@ -1,48 +1,31 @@
 ---
-const testimonials = [
-  {
-    title: "Awesome place",
-    description: "Excellent place to by flowers and vegetables plants grown on site",
-    name: "Robert Hardy",
-  },
-  {
-    title: "Love it",
-    description: "Great plants,affordable prices and friendly crew",
-    name: "Tim Cunningham",
-  },
-  {
-    title: "Phenomenal",
-    description: "Phenomenal",
-    name: "Aimee Adams",
-  },
-  {
-    title: "Open House",
-    description: "This greenhouse is fantastic! Open house Saturday June 2nd",
-    name: "Karen Comeau",
-  },
-];
+import { contentfulClient } from "../lib/contentful";
+import { TestimonialList } from "../types";
+
+const testimonialSection: TestimonialList = await contentfulClient.getEntry<TestimonialList>("mo9KBFXiVFB8QcdF28d9l");
 ---
 
 <section id="testimonials" class="bg-white dark:bg-gray-900 pt-12">
   <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
     <div class="mx-auto max-w-screen-sm">
-      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-primary dark:text-white">What Our Customers Say</h2>
+      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-primary dark:text-white">
+        {testimonialSection.fields.name}
+      </h2>
       <p class="mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
-        Explore the whole collection of open-source web components and elements built with the utility classes from
-        Tailwind
+        {testimonialSection.fields.description}
       </p>
     </div>
     <div class="grid mb-8 lg:mb-12 lg:grid-cols-2">
       {
-        testimonials.map((testimonial) => (
+        testimonialSection.fields.list.map((testimonial) => (
           <figure class="flex flex-col justify-center items-center shadow-[0_0px_3px_3px_rgba(0,0,0,0.5)] md:m-6 m-2 p-10 text-center bg-slate-900 border-b border-gray-200  md:p-12 dark:bg-gray-800 dark:border-gray-700">
             <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-              <h3 class="text-lg font-semibold text-primary dark:text-white">{testimonial.title}</h3>
-              <p class="my-4 text-white">{testimonial.description}</p>
+              <h3 class="text-lg font-semibold text-primary dark:text-white">{testimonial.fields.title}</h3>
+              <p class="my-4 text-white">{testimonial.fields.description}</p>
             </blockquote>
             <figcaption class="flex justify-center items-center space-x-3">
               <div class="space-y-0.5 font-medium text-secondary dark:text-white text-left">
-                <p class="text-center">{testimonial.name}</p>
+                <p class="text-center">{testimonial.fields.name}</p>
               </div>
             </figcaption>
           </figure>
