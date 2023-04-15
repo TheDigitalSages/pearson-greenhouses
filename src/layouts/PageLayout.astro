@@ -12,6 +12,37 @@ export interface Props {
 }
 
 const { meta } = Astro.props;
+
+import { contentfulClient } from "../lib/contentful";
+import { WebsiteDetails } from "../types";
+
+const websiteDetails: WebsiteDetails = await contentfulClient.getEntry<WebsiteDetails>("295uP17ssbHUyTpzVBLmOF");
+interface SocialLink {
+  ariaLabel: string;
+  icon: string;
+  href: string;
+}
+function getSocialIcon(link: string): SocialLink {
+  const normalizedLink = link.toLowerCase();
+  if (normalizedLink.includes("facebook")) {
+    return { ariaLabel: "Facebook", icon: "tabler:brand-facebook", href: link };
+  }
+  if (normalizedLink.includes("instagram")) {
+    return { ariaLabel: "Instagram", icon: "tabler:brand-instagram", href: link };
+  }
+  return { ariaLabel: "Website", icon: "tabler:world", href: link };
+}
+
+const footerData = {
+  links: [],
+  secondaryLinks: [],
+  socialLinks: websiteDetails?.fields?.socialMediaLinks
+    ? websiteDetails.fields.socialMediaLinks.map((socialLink) => getSocialIcon(socialLink))
+    : [],
+  footNote: `
+    Made by <a class="text-white hover:underline dark:text-gray-200" href="https://edwardbeazer.com/"> The Digital Sages</a> · All rights reserved.
+  `,
+};
 ---
 
 <Layout {meta}>

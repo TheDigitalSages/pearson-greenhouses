@@ -1,10 +1,14 @@
 ---
+import { contentfulClient } from "../lib/contentful";
+import { WebsiteDetails } from "../types";
+
+const websiteDetails: WebsiteDetails = await contentfulClient.getEntry<WebsiteDetails>("295uP17ssbHUyTpzVBLmOF");
 ---
 
 <section id="contact" class="mb-32 text-gray-800 pt-12">
   <div
     class="relative overflow-hidden bg-no-repeat bg-cover z-0"
-    style="background-position: 50%; background-image: url('https://cf.ltkcdn.net/garden/images/orig/215122-2123x1412-gardengreenhouse.jpg'); height: 300px;"
+    style=`background-position: 50%; background-image: url(https:${websiteDetails.fields.contactImage.fields.file.url}); height: 300px;`
   >
   </div>
   <div class="container text-gray-800 mx-auto px-4 md:px-12 z-50">
@@ -45,7 +49,7 @@
                   <a href="https://goo.gl/maps/T1KqSYk2gZcJSbeaA" target="_blank" rel="noopener noreferrer"
                     ><p class="text-gray-500">Farmington, NH 03835</p></a
                   >
-                  <p class="text-gray-500">Open Everyday: 8a-6p</p>
+                  <p class="text-gray-500">{websiteDetails.fields.retailHours}</p>
                 </div>
               </div>
             </div>
@@ -79,7 +83,7 @@
                   <a href="https://goo.gl/maps/qwWUV5ajHnD2jxNE9" target="_blank" rel="noopener noreferrer"
                     ><p class="text-gray-500">Alton, NH 03809</p></a
                   >
-                  <p class="text-gray-500">Open Everyday: 8a-6p</p>
+                  <p class="text-gray-500">{websiteDetails.fields.wholesaleHours}</p>
                 </div>
               </div>
             </div>
@@ -104,7 +108,9 @@
                 </div>
                 <div class="grow ml-6">
                   <p class="font-bold mb-1">Phone</p>
-                  <a href="tel:603-300-7171"><p class="text-gray-500 break-all">603-300-7171</p></a>
+                  <a href=`tel:${websiteDetails.fields.phone}`
+                    ><p class="text-gray-500 break-all">{websiteDetails.fields.phone}</p></a
+                  >
                 </div>
               </div>
             </div>
@@ -128,8 +134,8 @@
                 </div>
                 <div class="grow ml-6">
                   <p class="font-bold mb-1">Email</p>
-                  <a href="mailto:support@pearsonsgreenhouses.com?subject=Question"
-                    ><p class="text-gray-500 break-all">support@pearsonsgreenhouses.com</p></a
+                  <a href=`mailto:${websiteDetails.fields.email}?subject=Question`
+                    ><p class="text-gray-500 break-all">{websiteDetails.fields.email}</p></a
                   >
                 </div>
               </div>

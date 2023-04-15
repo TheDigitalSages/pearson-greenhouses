@@ -9,9 +9,14 @@ import Contact from "../parts/Contact.astro";
 import Testimonials from "../parts/Testimonials.astro";
 import Hero from "../parts/Hero.astro";
 
+import { contentfulClient } from "../lib/contentful";
+import { WebsiteDetails } from "../types";
+
+const websiteDetails: WebsiteDetails = await contentfulClient.getEntry<WebsiteDetails>("295uP17ssbHUyTpzVBLmOF");
+
 const meta = {
-  title: SITE.title,
-  description: SITE.description,
+  title: websiteDetails.fields.websiteName,
+  description: websiteDetails.fields.websiteDescription,
   dontUseTitleTemplate: true,
 };
 ---
