@@ -44,7 +44,7 @@ const {
 <header
   class:list={[
     { sticky: isSticky, relative: !isSticky },
-    "top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-100",
+    "top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-100 bg-primary dark:bg-slate-900",
   ]}
   id="header"
 >
@@ -86,7 +86,7 @@ const {
                 </>
               ) : (
                 <a
-                  class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                  class="font-medium text-white hover:text-secondary dark:hover:text-gray-700 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                   href={href}
                 >
                   {text}
