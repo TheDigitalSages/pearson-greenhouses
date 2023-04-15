@@ -42,7 +42,7 @@ const services = [
             src={import("~/assets/images/sample-flower.jpg")}
             alt="Flowers"
           />
-          <h5 class=`mb-1 text-xl font-medium ${index % 2 === 0 ? 'text-primary' : 'text-secondary'} dark:text-white`>{service.name}</h5>
+          <p class=`mb-1 text-xl font-medium ${index % 2 === 0 ? 'text-primary' : 'text-secondary'} dark:text-white`>{service.name}</p>
           <span class="text-sm text-center px-10 text-gray-500 dark:text-gray-400">{service.description}</span>
         </div>
       ))
