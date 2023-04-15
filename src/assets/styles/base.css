@@ -11,8 +11,28 @@
     color: var(--aw-color-text-muted);
   }
 
+  .text-primary {
+    color: var(--aw-color-primary);
+  }
+
+  .text-secondary {
+    color: var(--aw-color-secondary);
+  }
+
+  .text-green-light {
+    color: var(--aw-color-text-muted);
+  }
+
   .bg-light {
     background-color: var(--aw-color-bg-page);
+  }
+
+  .bg-primary {
+    background-color: var(--aw-color-primary);
+  }
+
+  .bg-secondary {
+    background-color: var(--aw-color-secondary);
   }
 
   .bg-dark {
@@ -34,7 +54,7 @@
 }
 
 #header.scroll {
-  @apply shadow-md md:shadow-lg bg-white md:bg-white/90 md:backdrop-blur-sm dark:bg-slate-900 dark:md:bg-slate-900/90;
+  @apply shadow-md md:shadow-lg bg-primary md:backdrop-blur-sm dark:bg-slate-900 dark:md:bg-slate-900/90;
 }
 
 .dropdown:hover .dropdown-menu {
